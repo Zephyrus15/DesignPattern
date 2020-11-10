@@ -19,26 +19,26 @@ import com.tactfactory.designpatternniveau1.singleton.tp1.entities.Entity1;
 public class SingletonTp1 {
   public static void main(String[] args) {
 
-    System.out.println(String.format("Nombre d'Entity1 %d", getEntity1s().stream().count()));
+    System.out.println(String.format("Nombre d'Entity1 %d", MonSingleton.getInstance()));
 
     Entity1 e11 = new Entity1();
     e11.setId(15);
     e11.setData("data e1 15");
 
-    getEntity1s().add(e11);
+    MonSingleton.getInstance().add(e11);
 
     Entity1 e12 = new Entity1();
     e12.setId(16);
     e12.setData("data e1 16");
 
-    getEntity1s().add(e12);
+    MonSingleton.getInstance().add(e12);
 
-    for (Entity1 item : getEntity1s()) {
+    for (Entity1 item : MonSingleton.getInstance()) {
       System.out.println(item);
     }
   }
 
-  private static List<Entity1> getEntity1s(){
+  private static List<Entity1> MonSingleton.getInstance(){
     List<Entity1> result = new ArrayList<Entity1>();
 
     for (int i = 0; i < 20; i++) {

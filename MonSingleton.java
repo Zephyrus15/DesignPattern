@@ -1,6 +1,7 @@
 package com.tactfactory.designpatternniveau1.singleton.tp1;
 
-java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MonSingleton
 {
@@ -8,6 +9,8 @@ public class MonSingleton
     {}
      
     private static MonSingleton INSTANCE = null;
+    
+    private List<Entity1> list1 = new ArrayList<Entity1>();
      
     public static synchronized MonSingleton getInstance()
     {           
